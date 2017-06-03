@@ -12,10 +12,12 @@ def rename_files():
     for file_name in file_list:
         #os.rename(file_name,file_name.translate(None,"0123456789"))
         os.rename(file_name,file_name.translate(None,".jpg"))
-        reverse_name = file_name[::-1]
-        print (reverse_name)
-        #os.rename(file_name,file_name+ ".jpg")
+        os.rename(file_name,file_name[::-1])
+        print (file_name)
+        os.rename(file_name,file_name+ ".jpg")
         #os.rename(file_name,file_name.lstrip(".jpg"))
+        #print("Full")
+        print (file_name)
     os.chdir(saved_path)
         #print("Current Working Direstory is "+os.getcwd())
 rename_files()
